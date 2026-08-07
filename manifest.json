@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Real-time Web Image Translator",
+  "version": "0.1.0",
+  "description": "Detecta texto em imagens de páginas da web, traduz e sobrepõe o conteúdo traduzido.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "<all_urls>",
+    "https://translate.googleapis.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Tradutor de imagens",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "vendor/tesseract.min.js",
+        "content.js"
+      ],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["vendor/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
