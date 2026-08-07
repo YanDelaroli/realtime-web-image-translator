@@ -1,0 +1,12 @@
+{
+  "name": "realtime-web-image-translator",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare:ocr": "node scripts/prepare-ocr.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
