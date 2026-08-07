@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tradutor de imagens</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Tradutor de imagens</h1>
+
+      <label class="toggle-row">
+        <span>Ativar tradução</span>
+        <input id="enabled" type="checkbox" />
+      </label>
+
+      <label class="field">
+        <span>Idioma de destino</span>
+        <select id="targetLanguage">
+          <option value="pt">Português</option>
+          <option value="en">Inglês</option>
+          <option value="es">Espanhol</option>
+          <option value="fr">Francês</option>
+          <option value="de">Alemão</option>
+          <option value="it">Italiano</option>
+          <option value="ja">Japonês</option>
+          <option value="ko">Coreano</option>
+          <option value="zh-CN">Chinês simplificado</option>
+        </select>
+      </label>
+
+      <p class="hint">Recarregue a página após instalar a extensão.</p>
+      <p id="status" class="status" aria-live="polite"></p>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
